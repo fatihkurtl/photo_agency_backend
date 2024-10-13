@@ -81,6 +81,8 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'about.apps.AboutConfig',
     'references.apps.ReferencesConfig',
+    'portfolio.apps.PortfolioConfig',
+    'services.apps.ServicesConfig',
 ]
 
 MIDDLEWARE = [
