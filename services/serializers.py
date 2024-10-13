@@ -1,5 +1,13 @@
 from rest_framework import serializers
-from .models import Category, Package, Service, Feature
+from .models import ServiceContent, Category, Package, Service, Feature, WhyChooseOurServices
+
+
+
+class ServiceContentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ServiceContent
+        exclude = ('id', 'created_at', 'updated_at')
+
 
 class FeatureSerializer(serializers.ModelSerializer):
     class Meta:
@@ -41,4 +49,10 @@ class ServiceListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Service
+        exclude = ('id', 'active', 'created_at', 'updated_at')
+        
+
+class WhyChooseOurServicesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WhyChooseOurServices
         exclude = ('id', 'created_at', 'updated_at')

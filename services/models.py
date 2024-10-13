@@ -8,6 +8,18 @@ class CreatedUpdatedModel(models.Model):
     class Meta:
         abstract = True
         
+        
+class ServiceContent(CreatedUpdatedModel):
+    name = models.CharField(max_length=100, null=False, blank=False, unique=True, verbose_name="Hizmet Içerik Adı", help_text="Hizmet Içerik Adı")
+    description = models.TextField(null=False, blank=False, verbose_name="Hizmet Içerik Açıklaması", help_text="Hizmet Içerik Açıklaması")
+    
+    class Meta:
+        verbose_name = "Hizmetler İçerik Yazısı"
+        verbose_name_plural = "Hizmetler İçerik Yazıları"
+
+    def __str__(self):
+        return f"{self.name} - {self.description}"
+        
 
 class Category(CreatedUpdatedModel):
     name = models.CharField(max_length=100, null=False, blank=False, unique=True, verbose_name="Kategori Adı", help_text="Kategori Adı")
@@ -25,6 +37,8 @@ class Service(CreatedUpdatedModel):
     title = models.CharField(max_length=100, null=False, blank=False, unique=True, verbose_name="Hizmet Adı", help_text="Hizmet Adı")
     description = models.TextField(null=False, blank=False, verbose_name="Hizmet Açıklaması", help_text="Hizmet Açıklaması")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="services", verbose_name="Hizmet Kategorisi", help_text="Hizmet kategorisi")
+    
+    active = models.BooleanField(default=True, verbose_name="Aktif", help_text="Hizmet aktif mi?")
     
     class Meta:
         verbose_name = "Hizmet"
@@ -57,3 +71,15 @@ class Feature(CreatedUpdatedModel):
 
     def __str__(self):
         return f"{self.package.name} - {self.description}"
+    
+    
+class WhyChooseOurServices(CreatedUpdatedModel):
+    title = models.CharField(max_length=100, null=False, blank=False, unique=True, verbose_name="Hizmet Adı", help_text="Hizmet adı")
+    description = models.TextField(null=False, blank=False, verbose_name="Hizmet Açıklaması", help_text="Hizmet açıklaması")
+    
+    class Meta:
+        verbose_name = "Neden Hizmetlerimizi Seçmelisiniz İçeriği"
+        verbose_name_plural = "Neden Hizmetlerimizi Seçmelisiniz İçerikleri"
+
+    def __str__(self):
+        return self.title

@@ -34,12 +34,12 @@ class OurApproach(CreatedUpdatedModel):
 
 class BusinessCard(CreatedUpdatedModel):
     logo = models.ImageField(upload_to="about", null=True, blank=True, verbose_name="Logo", help_text="Logo")
-    title = models.CharField(max_length=50, verbose_name="Başlık", help_text="Business Card başlığı")
-    subtitle = models.CharField(max_length=50, verbose_name="Alt Başlık", help_text="Business Card alt başlığı")
+    title = models.CharField(max_length=50, verbose_name="Başlık", help_text="Kartvizit başlığı")
+    subtitle = models.CharField(max_length=50, verbose_name="Alt Başlık", help_text="Kartvizit alt başlığı")
     
     class Meta:
-        verbose_name = "Business Card İçeriği"
-        verbose_name_plural = "Business Cards İcerikleri"
+        verbose_name = "Kartvizit İçeriği"
+        verbose_name_plural = "Kartvizit İçerikleri"
         
     def __str__(self):
         return self.title
