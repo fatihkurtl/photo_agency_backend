@@ -83,6 +83,7 @@ INSTALLED_APPS = [
     'references.apps.ReferencesConfig',
     'portfolio.apps.PortfolioConfig',
     'services.apps.ServicesConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
