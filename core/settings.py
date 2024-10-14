@@ -49,6 +49,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://read-and-write.example.com",
+    "http://localhost:3000",
 ]
 
 CORS_ALLOW_HEADERS = (
