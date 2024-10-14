@@ -33,20 +33,19 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "7fe-astute-kepler.circumeo-apps.net",
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    "https://sub.example.com",
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "http://192.168.1.102:3000"
+    "https://7fe-astute-kepler.circumeo-apps.net"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://read-and-write.example.com",
+    "https://7fe-astute-kepler.circumeo-apps.net",
     "http://localhost:3000",
 ]
 
