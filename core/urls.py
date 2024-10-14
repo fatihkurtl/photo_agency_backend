@@ -19,9 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 
-admin.site.site_header = "Foto Ajans Admin Paneli"
-admin.site.site_title = "Foto Ajans Admin Paneli"
-admin.site.index_title = "Foto Ajans Admin Paneline Hoşgeldiniz"
+admin.site.site_header = "Zen Medya Admin Paneli"
+admin.site.site_title = "Zen Medya Admin Paneli"
+admin.site.index_title = "Zen Medya Admin Paneline Hoş geldiniz"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +32,7 @@ urlpatterns = [
     path('portfolio/', include('portfolio.urls')),
     path('services/', include('services.urls')),
     path('home/', include('home.urls')),
+    path('general/', include('general.urls')),
 ]
 
 if settings.DEBUG:

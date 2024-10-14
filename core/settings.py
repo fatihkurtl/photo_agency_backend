@@ -84,7 +84,9 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'services.apps.ServicesConfig',
     'home.apps.HomeConfig',
+    'general.apps.GeneralConfig',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
