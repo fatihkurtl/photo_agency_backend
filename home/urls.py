@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
     path('hero_section/', views.HeroSectionView.as_view({'get': 'list'}), name='hero_section'),
+    path('cta_section', views.CTASectionView.as_view({'get': 'list'}), name='cta_section'),
 ]
 
 

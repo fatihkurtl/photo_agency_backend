@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import HeroSection
+from .models import HeroSection, CTASection
 
 
 
@@ -13,3 +13,9 @@ class HeroSectionAdmin(admin.ModelAdmin):
         if obj.image:
             return format_html('<img src="{}" width="100" height="100" />'.format(obj.image.url))
         return "Resim Yok"
+
+
+@admin.register(CTASection)
+class CTASectionAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')
