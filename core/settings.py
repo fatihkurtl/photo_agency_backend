@@ -33,19 +33,19 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "electoral-winna-fatihkurt-763b2dc7.koyeb.app",
+    "monkfish-app-2-vjqi4.ondigitalocean.app",
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "https://electoral-winna-fatihkurt-763b2dc7.koyeb.app"
+    "https://monkfish-app-2-vjqi4.ondigitalocean.app"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://electoral-winna-fatihkurt-763b2dc7.koyeb.app",
+    "https://monkfish-app-2-vjqi4.ondigitalocean.app",
     "http://localhost:3000",
 ]
 
