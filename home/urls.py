@@ -10,8 +10,4 @@ urlpatterns = [
     path('cta_section', views.CTASectionView.as_view({'get': 'list'}), name='cta_section'),
 ]
 
-# if settings.DEBUG:
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-# urlpatterns = format_suffix_patterns(urlpatterns)
+urlpatterns = format_suffix_patterns(urlpatterns)
