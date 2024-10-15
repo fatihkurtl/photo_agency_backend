@@ -1,16 +1,12 @@
-FROM python:3.11-slim
-WORKDIR /photo_agency_backend
-COPY ./requirements.txt /photo_agency_backend/
+FROM python:3.11-slim AS django
+
+WORKDIR /usr/local/django_app
+
+COPY ./requirements.txt /usr/local/django_app/
 RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
+
 RUN python3 manage.py collectstatic --noinput
 
-FROM nginx:alpine
-COPY --from=0 /photo_agency_backend/staticfiles /usr/local/photo_agency_backend/static
-COPY --from=0 /photo_agency_backend/media /usr/local/photo_agency_backend/media
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-COPY --from=0 /photo_agency_backend /photo_agency_backend
-WORKDIR /photo_agency_backend
-
-CMD nginx && gunicorn your_project.wsgi:application --bind 0.0.0.0:8000
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
