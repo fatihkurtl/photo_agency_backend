@@ -10,7 +10,7 @@ urlpatterns = [
     path('cta_section', views.CTASectionView.as_view({'get': 'list'}), name='cta_section'),
 ]
 
-if settings.DEBUG:
+if settings.DEBUG == False:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
