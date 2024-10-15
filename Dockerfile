@@ -6,8 +6,8 @@ COPY . .
 RUN python3 manage.py collectstatic --noinput
 
 FROM nginx:alpine
-COPY --from=0 /photo_agency_backend/staticfiles /usr/local/django_app/static
-COPY --from=0 /photo_agency_backend/media /usr/local/django_app/media
+COPY --from=0 /photo_agency_backend/staticfiles /usr/local/photo_agency_backend/static
+COPY --from=0 /photo_agency_backend/media /usr/local/photo_agency_backend/media
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=0 /photo_agency_backend /photo_agency_backend
