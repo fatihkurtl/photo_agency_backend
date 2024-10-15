@@ -9,7 +9,5 @@ urlpatterns = [
     path('hero_section/', views.HeroSectionView.as_view({'get': 'list'}), name='hero_section'),
     path('cta_section', views.CTASectionView.as_view({'get': 'list'}), name='cta_section'),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    
+
 urlpatterns = format_suffix_patterns(urlpatterns)
