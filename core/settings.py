@@ -62,6 +62,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+WHITENOISE_USE_FINDERS = True
+
 TAGGIT_CASE_INSENSITIVE = True
 # Application definition
 
