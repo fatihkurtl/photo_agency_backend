@@ -19,4 +19,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "core.wsgi:application"]
+CMD ["nginx", "-g", "daemon off;"]
