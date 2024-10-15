@@ -33,19 +33,19 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "monkfish-app-2-vjqi4.ondigitalocean.app",
+    "3cs-energetic-fermi.circumeo-apps.net",
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "https://monkfish-app-2-vjqi4.ondigitalocean.app"
+    "https://3cs-energetic-fermi.circumeo-apps.net"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://monkfish-app-2-vjqi4.ondigitalocean.app",
+    "https://3cs-energetic-fermi.circumeo-apps.net",
     "http://localhost:3000",
 ]
 
