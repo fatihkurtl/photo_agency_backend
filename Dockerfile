@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim AS django
 
 WORKDIR /photo_agency_backend
 
@@ -10,8 +10,13 @@ COPY . .
 
 RUN python3 manage.py collectstatic --noinput
 
-RUN mkdir -p media && chmod -R 755 media
+FROM nginx:alpine
+
+COPY --from=django /photo_agency_backend/staticfiles /usr/share/nginx/html/static
+COPY --from=django /photo_agency_backend/media /usr/share/nginx/html/media
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "core.wsgi:application"]
+CMD ["nginx", "-g", "daemon off;"]
