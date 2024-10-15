@@ -16,7 +16,7 @@ class HeroSection(CreatedUpdatedModel):
 
     class Meta:
         verbose_name = "Ana Sayfa Hero Bölümü"
-        verbose_name_plural = "Ana Sayfa Hero Bölümüleri"
+        verbose_name_plural = "Ana Sayfa Hero Bölümleri"
         
     def __str__(self):
         return self.title
