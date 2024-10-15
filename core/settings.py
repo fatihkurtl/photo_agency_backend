@@ -106,7 +106,13 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework_yaml.parsers.YAMLParser',
+    ],
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework_yaml.renderers.YAMLRenderer',
+    ],
 }
 
 
@@ -115,7 +121,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
