@@ -10,4 +10,4 @@ urlpatterns = [
     path('cta_section', views.CTASectionView.as_view({'get': 'list'}), name='cta_section'),
 ]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+# urlpatterns = format_suffix_patterns(urlpatterns)
