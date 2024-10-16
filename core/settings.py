@@ -75,6 +75,8 @@ CSRF_COOKIE_SECURE = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+MEDIA_URL = 'https://3cs-energetic-fermi.circumeo-apps.net/media/'
+
 
 WHITENOISE_USE_FINDERS = True
 
