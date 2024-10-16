@@ -26,13 +26,13 @@ admin.site.index_title = "Zen Medya Admin Paneline Hoş geldiniz"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api-auth/", include("rest_framework.urls"), name="rest_framework"),
-    path('api/contact/', include('contact.urls')),
-    path('api/about/', include('about.urls')),
-    path('api/references/', include('references.urls')),
-    path('api/portfolio/', include('portfolio.urls')),
-    path('api/services/', include('services.urls')),
-    path('api/home/', include('home.urls')),
-    path('api/general/', include('general.urls')),
+    path('contact/', include('contact.urls')),
+    path('about/', include('about.urls')),
+    path('references/', include('references.urls')),
+    path('portfolio/', include('portfolio.urls')),
+    path('services/', include('services.urls')),
+    path('home/', include('home.urls')),
+    path('general/', include('general.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
