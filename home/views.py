@@ -10,6 +10,11 @@ from .serializers import HeroSectionSerializer, CTASectionSerializer
 class HeroSectionView(viewsets.ReadOnlyModelViewSet):
     queryset = HeroSection.objects.all()
     serializer_class = HeroSectionSerializer
+    
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
 
 class CTASectionView(viewsets.ReadOnlyModelViewSet):
