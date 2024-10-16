@@ -33,21 +33,21 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "photo-agency-frontend-git-main-fatih-kurts-projects-66a14356.vercel.app",
+    "photo-agency-frontend.vercel.app",
     "sea-lion-app-75389.ondigitalocean.app",
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "https://photo-agency-frontend-git-main-fatih-kurts-projects-66a14356.vercel.app",
+    "https://photo-agency-frontend.vercel.app",
     "https://sea-lion-app-75389.ondigitalocean.app",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://photo-agency-frontend-git-main-fatih-kurts-projects-66a14356.vercel.app",
+    "https://photo-agency-frontend.vercel.app",
     "https://sea-lion-app-75389.ondigitalocean.app",
     "http://localhost:3000",
 ]
