@@ -33,21 +33,21 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "photo-agency-frontend.vercel.app",
+    "vocational-ostrich-fatihkurt-610bc720.koyeb.app",
     "sea-lion-app-75389.ondigitalocean.app",
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "https://photo-agency-frontend.vercel.app",
+    "https://vocational-ostrich-fatihkurt-610bc720.koyeb.app",
     "https://sea-lion-app-75389.ondigitalocean.app",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://photo-agency-frontend.vercel.app",
+    "https://vocational-ostrich-fatihkurt-610bc720.koyeb.app",
     "https://sea-lion-app-75389.ondigitalocean.app",
     "http://localhost:3000",
 ]
