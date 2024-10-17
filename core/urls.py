@@ -19,9 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 
-admin.site.site_header = "Zen Medya Admin Paneli"
-admin.site.site_title = "Zen Medya Admin Paneli"
-admin.site.index_title = "Zen Medya Admin Paneline Hoş geldiniz"
+admin.site.site_header = "FA Medya Admin Paneli"
+admin.site.site_title = "FA Medya Admin Paneli"
+admin.site.index_title = "FA Medya Admin Paneline Hoş geldiniz"
 
 urlpatterns = [
     path('fa_medya_yönetim/', admin.site.urls),
