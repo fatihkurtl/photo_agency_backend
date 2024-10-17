@@ -24,7 +24,8 @@ admin.site.site_title = "Zen Medya Admin Paneli"
 admin.site.index_title = "Zen Medya Admin Paneline Hoş geldiniz"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('fa_medya_yönetim/', admin.site.urls),
+    path("admin/",include("admin_honeypot.urls")),
     path('api/', include([
         path('contact/', include('contact.urls')),
         path('about/', include('about.urls')),

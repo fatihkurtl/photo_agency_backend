@@ -92,6 +92,7 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'home.apps.HomeConfig',
     'general.apps.GeneralConfig',
+    'admin_honeypot',
 ]
 
 
