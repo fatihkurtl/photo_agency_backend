@@ -33,22 +33,19 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "clownfish-app-tb36g.ondigitalocean.app",
-    "sea-lion-app-75389.ondigitalocean.app",
+    "monkfish-app-2-l9a2v.ondigitalocean.app",
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "https://clownfish-app-tb36g.ondigitalocean.app",
-    "https://sea-lion-app-75389.ondigitalocean.app",
+    "https://monkfish-app-2-l9a2v.ondigitalocean.app",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://clownfish-app-tb36g.ondigitalocean.app",
-    "https://sea-lion-app-75389.ondigitalocean.app",
+    "https://monkfish-app-2-l9a2v.ondigitalocean.app",
     "http://localhost:3000",
 ]
 
