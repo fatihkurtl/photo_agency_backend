@@ -34,12 +34,14 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "monkfish-app-2-l9a2v.ondigitalocean.app",
+    "rb5-dynamic-mendel.circumeo-apps.net",
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
     "https://monkfish-app-2-l9a2v.ondigitalocean.app",
+    "https://rb5-dynamic-mendel.circumeo-apps.net",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -47,6 +49,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://monkfish-app-2-l9a2v.ondigitalocean.app",
     "http://localhost:3000",
+    "https://rb5-dynamic-mendel.circumeo-apps.net",
 ]
 
 CORS_ALLOW_HEADERS = (
